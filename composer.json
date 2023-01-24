@@ -1,0 +1,30 @@
+{
+  "name": "tomanday/presty",
+  "description": "Presty is a lightweight, easy-to-learn, and complete PHP back-end development framework",
+  "type": "project",
+  "require": {
+    "php": ">=7.3",
+    "symfony/console": "^5.4"
+  },
+  "license": "Apache-2.0",
+  "autoload": {
+    "psr-4": {
+      "app\\": "app",
+      "moduleGuides\\": "moduleGuides"
+    },
+    "psr-0": {
+      "": "extensions/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Tomanday",
+      "email": "790455692@qq.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "classmap": [
+    "presty/console/App/Commands"
+  ]
+}
+

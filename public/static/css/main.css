@@ -1,0 +1,51 @@
+/*
+ * +----------------------------------------------------------------------
+ * | Presty Framework
+ * +----------------------------------------------------------------------
+ * | Copyright (c) 20021~2022 Tomanday All rights reserved.
+ * +----------------------------------------------------------------------
+ * | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+ * +----------------------------------------------------------------------
+ * | Email: 790455692@qq.com
+ * +----------------------------------------------------------------------
+ */
+
+p {
+    line-height: 1em;
+    font-size: 42px;
+}
+
+.div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+}
+
+.title {
+    font-size: 5rem;
+    line-height: 50px;
+    color: #696969;
+    font-weight: 300;
+}
+
+.version {
+    font-size: 15px;
+    color: #A9A9A9;
+}
+
+.nav {
+    List-style: "";
+}
+
+.nav li {
+    display: inline;
+    margin-right: 3rem;
+    white-space: nowrap;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: gray;
+}

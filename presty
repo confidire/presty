@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+<?php
+/*
+ * +----------------------------------------------------------------------
+ * | Presty Framework
+ * +----------------------------------------------------------------------
+ * | Copyright (c) 20021~2022 Tomanday All rights reserved.
+ * +----------------------------------------------------------------------
+ * | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+ * +----------------------------------------------------------------------
+ * | Email: 790455692@qq.com
+ * +----------------------------------------------------------------------
+ */
+//控制台主命令
+
+require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/config/Config.php';
+
+use Symfony\Component\Console\Application;
+use presty\Console\App\Commands\Version;
+use presty\Console\App\Commands\ClearCache;
+use presty\Console\App\Commands\Run;
+
+$app = new Application();
+$app->add (new Version());
+$app->add (new ClearCache());
+$app->add (new Run());
+try {
+    $app->run ();
+} catch (Exception $e) {
+}

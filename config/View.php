@@ -11,13 +11,10 @@
  * +----------------------------------------------------------------------
  */
 
-namespace moduleGuides;
-
-class View
-{
-    public function register (\startphp\Core $app)
-    {
-        //注册View队列
-        $app->instance('viewQueue',$app->viewQueue->init($view = $app->view,"systemView"));
-    }
-}
+return [
+    'template_engine' => '\presty\view\Start',              //系统默认使用的模板引擎，需要与对应的模板引擎类名保持一致
+    'template_engine_prefix' => '{{',                       //前端模板引擎标识符前缀
+    'template_engine_suffix' => '}}',                       //前端模板引擎标识符后缀
+    'variable_prefix' => '$',                               //变量标识符前缀
+    'constant_prefix' => '%',                               //常量标识符前缀
+];

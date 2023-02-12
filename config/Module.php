@@ -14,7 +14,7 @@
 return [
     "core" => [moduleGuides\Core::class],
     "http" => [moduleGuides\Http::class],
-    "view" => [moduleGuides\View::class],
+    "View" => [moduleGuides\View::class],
     "database" => [moduleGuides\Database::class],
-    //"storage" => [moduleGuides\Storage::class],
+    //"storage" => [ModuleGuides\Storage::class],
 ];

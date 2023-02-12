@@ -1,50 +1,36 @@
-# Presty v0.8-Alpha.1
+# Presty v1.0.0
 
 [![OSCS Status](https://www.oscs1024.com/platform/badge/Cat-Catalpa/core.svg?size=small)](https://www.oscs1024.com/project/Cat-Catalpa/core?ref=badge_small)
-![Version-0.8](https://img.shields.io/badge/Version-0.8-success)
+![Version-0.8](https://img.shields.io/badge/Version-0.1-success)
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/Cat-Catalpa/core/tree/main.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/Cat-Catalpa/core/tree/main)
 [![codecov](https://codecov.io/gh/Cat-Catalpa/core/branch/main/graph/badge.svg?token=9CT0Z7XX1S)](https://codecov.io/gh/Cat-Catalpa/core)
 
 
-欢迎使用 Presty v0.8，相比于以往的版本，v0.8版本更新更加注重框架整体结构和规范化，我们重构了大部分底层结构，并将在未来的几个版本中持续优化框架运行逻辑。
+Presty 是一款易上手、轻量级、完善化的后端PHP开发框架。
 
-[框架官网](https://startphp.catcatalpa.com) | [开发文档](https://doc.startphp.catcatalpa.com) | [开源地址](https://github.com/catcatalpa/startphp) | [开源协议](https://github.com/catcatalpa/StartPHP/blob/master/LICENSE)
+[框架官网](https://presty.catcatalpa.com) | [开发文档](https://doc.presty.catcatalpa.com) | [开源地址](https://github.com/catcatalpa/presty) | [开源协议](https://github.com/catcatalpa/presty/blob/master/LICENSE)
 
-## 在下载本次更新前，您需要了解以下重要事项：
+## 一、在使用本版本的Presty前，您需要了解以下重要事项：
 
-- **Presty框架原名为StartPHP，从v0.8版本起，StartPHP框架正式更名为Presty**
-- Presty v0.8 对于 PHP 运行环境要求是 7.3 或以上。
-- 若您单独更新过框架核心文件版本，请注意您当前项目根目录下的`README.md`文件可能并不是适合您框架版本的最新版，请以`vendor/catcatalpa/core`目录下的`README.md`文件为主。
-- 由于composer自动加载的特性，我们无法将类库别名的功能与v0.8版本的部分新特性兼容，因此从v0.8版本开始，在找到合适地解决方案前，Presty将永久移除此项功能。
+1. Presty v1.0.0 对于 PHP 运行环境要求是 7.3 或以上。
+2. 若您单独更新过框架核心文件版本，请注意您当前项目根目录下的`README.md`文件可能并不是适合您框架版本的最新版，请以`vendor/tomanday/presty`目录下的`README.md`文件为主。
+3. 选择Presty版本时，请注意了解版本号中所表示的信息：
+    - `dev` 表示此版本为早期研发版本，是为了验证框架是否能够正常运行而发布的版本，极其不稳定，非必要情况下请不要安装。
+    - `alpha` 表示此版本为开发中版本，新版本功能尚未完全开发完成，稳定性低，不推荐安装。
+    - `beta` 表示此版本为测试版本，新版本功能已基本完善，主要是各类Bug的修复，稳定性中等偏低，不推荐在生产环境中安装。
+4. Presty版本号迭代遵从`x.y.z`的发布格式，选择Presty版本时，如果你发现这个版本的版本号数字的以下某部分相较上一个版本有了变化：
+    - `z` 部分变化表示此版本为上一个版本的修复版本，解决了某些情况下可能出现的Bug，大多时候能够正常从较近的版本无缝升级。
+    - `y` 部分变化表示此版本为上一个版本的补充版本，即补充了系统的某些功能，大多时候能够正常从较近的版本无缝升级。
+    - `x` 部分变化表示此版本为大版本更新，是独立的新版本，新增多项功能，该部分变化时会将`y`与`z`部分清零，无法从以往的任何版本无缝升级。
 ---
 
-## Presty v0.7-220901-Beta 更新日志如下
+## 二、Presty v1.0.0-dev-1 更新日志：
 
-### *[ 系统 ]*
-
-- 新增`模块`机制
-- 新增`Http`机制
-- 优化了系统引导流程
-
-> 以下内容预计在本版本中完善并上线。
-
-- ORM机制的完善
-- 模型操作机制的完善
-- 模板引擎机制的完善
-- 命令行工具的完善
-- 重构报错机制
-- 重构系统配置加载机制
-- 更加安全的验证机制
-- 初步实现自定义插件拓展系统
-
-> 以下内容预计将在后续版本中完善。
-- 符合更多`PSR`系列规范
-- 更多待开发功能将伴随此日志的更新不断补充
+- 本版本为初始版本，无更多更新日志
 
 ## Presty的核心代码已获得以下机构的认证
 
-[![OSCS Status](https://www.oscs1024.com/platform/badge/Cat-Catalpa/core.svg?size=large)](https://www.oscs1024.com/project/Cat-Catalpa/core?ref=badge_large)
-[![墨菲安全](https://www.murphysec.com/assets/logo.6a136b81.svg)](https://www.murphysec.com/dr/VUWXgrRXXSzYJlWUKQ)
+[![墨菲安全](https://www.murphysec.com/assets/logo.6a136b81.svg)](https://old.murphysec.com/dr/ajgI6mrQe7eRYZmc0J)
 
 
 ## 特别感谢

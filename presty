@@ -13,19 +13,4 @@
  */
 //控制台主命令
 
-require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/config/Config.php';
-
-use Symfony\Component\Console\Application;
-use presty\Console\App\Commands\Version;
-use presty\Console\App\Commands\ClearCache;
-use presty\Console\App\Commands\Run;
-
-$app = new Application();
-$app->add (new Version());
-$app->add (new ClearCache());
-$app->add (new Run());
-try {
-    $app->run ();
-} catch (Exception $e) {
-}
+require_once __DIR__."/public/index.php";

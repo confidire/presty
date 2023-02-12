@@ -14,10 +14,8 @@
 namespace presty;
 
 //记录系统初始状态
-global $hasBeenRun;
 define ('SYSTEM_START_TIME', microtime (true));
 define ('SYSTEM_START_MEMORY', memory_get_usage ());
-$hasBeenRun['init'] = " - System_Init";
 
 
 require __DIR__ . '/../vendor/autoload.php';
@@ -28,5 +26,6 @@ $app = (new Core())->init();
 //业务处理和渲染输出
 $response = $app->runMain ();
 $response->send();
+
 //记录状态，结束运行
 $app->end();

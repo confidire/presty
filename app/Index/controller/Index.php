@@ -12,12 +12,13 @@
  */
 
 namespace app\Index\controller;
-use startphp\Controller;
+use presty\Controller;
+use presty\Request;
 
 class Index extends Controller
 {
-    public function index ($vars = [])
+    public function index (Request $request)
     {
-        return $this::assign ("version", MAIN_VERSION)::getFileContent ('Index/index');
+        return $this::assign (["version" => MAIN_VERSION])::getFileContent ('Index/index');
     }
 }

@@ -5,7 +5,7 @@
   "require": {
     "php": ">=7.3",
     "symfony/console": "^5.4",
-    "tomanday/presty-core": "dev-dev",
+    "upstair/presty-core": "^1.x-dev",
     "ext-fileinfo": "*",
     "ext-json": "*"
   },

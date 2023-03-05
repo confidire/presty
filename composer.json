@@ -1,5 +1,5 @@
 {
-  "name": "tomanday/presty",
+  "name": "upstair/presty",
   "description": "Presty is a lightweight, easy-to-learn, and complete PHP back-end development framework",
   "type": "project",
   "require": {

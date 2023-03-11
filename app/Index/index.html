@@ -9,24 +9,210 @@
   ~ | Email: 790455692@qq.com
   ~ +----------------------------------------------------------------------
   -->
-<html lang="zh-cn">
+<!DOCTYPE html>
+<html lang="zh-cn" >
 <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0,minimum-scale=1.0">
-    <meta name="description" content="presty是一款轻量化、易上手、完善化的PHP后端开发框架">
-    <link type="text/css" rel="stylesheet" href="/static/css/main.css">
-    <title>Welcome!</title>
+<meta charset="UTF-8">
+<title>Welcome!</title>
+<style type="text/css">
+    @import url(http://fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  margin:0;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:42px;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
+}
+
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
+}
+
+.inner-header {
+  height:60vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.root-path-div {
+    color: rgb(0 129 236);
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 0px 10px 0px 0px;
+    margin: 50px 0px 0px 0px;
+}
+
+.root-path {
+    font-family: unset;
+    font-size: 20px;
+    color: rgb(30 100 212);
+    margin: 10px 10px 10px 7px;
+}
+
+.root-path span {
+    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    color: #fff;
+    border-radius: 50px;
+    padding: 4px 10px;
+    margin-right: 10px;
+}
+
+.root-intro {
+    color: #fff;
+    font-size: medium;
+    margin-top: 20px;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+.cover-title{
+    line-height: 5px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+.bottom-intro {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.intro-item {
+    text-align: center;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+</style>
 </head>
 <body>
-<div class="div">
-    <div>
-        <p class="title">{{%frame_work_name}} <span class="version">{{$version||default=0.7}}</span></p>
-        <ul class="nav">
-            <li><a href="https://presty.catcatalpa.com" target="_blank">框架官网</a></li>
-            <li><a href="https://doc.presty.catcatalpa.com" target="_blank">开发文档</a></li>
-            <li><a href="https://github.com/cat-catalpa/presty/blob/master/LICENSE" target="_blank">开源协议</a></li>
-            <li><a href="https://github.com/cat-catalpa/presty" target="_blank">GitHub</a></li>
-        </ul>
+
+<div class="header">   
+    <div class="inner-header flex">
+        <h1 class="cover-title">欢迎使用</h1>
+        <h1 class="cover-title">{{%frame_work_name}} {{$version||default=0.7}}</h1>
+        <div class="root-path-div">
+            <p class="root-path"><span>Root</span>{{%root}}</p>
+        </div>
+        <p class="root-intro">你的程序将在此处运行</p>
     </div>
+
+    <!--Waves Container-->
+    <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+        </svg>
+    </div>
+    <!--Waves end-->
+
+</div>
+<div class="bottom-intro">
+    <div class="intro-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+        </svg>
+        <h2>Document</h2>
+        <p>完善的文档、指导体系</p>
+    </div>
+    <div class="intro-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        </svg>
+        <h2>Coding</h2>
+        <p>易于上手，可扩展性高</p>
+    </div>
+    <div class="intro-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </svg>
+        <h2>Community</h2>
+        <p>与开发者们交流或寻求帮助</p>
+    </div>
+</div>
+
 </div>
 </body>
 </html>

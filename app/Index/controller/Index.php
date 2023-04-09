@@ -19,6 +19,6 @@ class Index extends Controller
 {
     public function index (Request $request)
     {
-        return $this::assign (["version" => MAIN_VERSION])::getFileContent ('Index/index');
+        return $this::assign (["runningMode" => app()->getRunningMode()])::getFileContent ('Index/index');
     }
 }

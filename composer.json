@@ -1,11 +1,11 @@
 {
-  "name": "upstair/presty",
+  "name": "confidire/presty",
   "description": "Presty is a lightweight, easy-to-learn, and complete PHP back-end development framework",
   "type": "project",
   "require": {
     "php": ">=7.3",
     "symfony/console": "^5.4",
-    "upstair/presty-core": "^1.x-dev",
+    "confidire/presty-core": "1.x-dev",
     "ext-fileinfo": "*",
     "ext-json": "*"
   },

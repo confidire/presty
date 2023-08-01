@@ -1,12 +1,11 @@
 # Presty v1.0.0
 
-[![OSCS Status](https://www.oscs1024.com/platform/badge/Cat-Catalpa/core.svg?size=small)](https://www.oscs1024.com/project/Cat-Catalpa/core?ref=badge_small)
 ![Version-1.0](https://img.shields.io/badge/version-1.0-success)
 
 
 Presty 是一款易上手、轻量级、完善化的后端PHP开发框架。
 
-[框架官网](https://presty.catcatalpa.com) | [开发文档](https://doc.presty.catcatalpa.com) | [开源地址](https://github.com/catcatalpa/presty) | [开源协议](https://github.com/catcatalpa/presty/blob/master/LICENSE)
+[框架官网](https://presty.confidire.com) | [开发文档](https://doc.presty.confidire.com) | [开源地址](https://github.com/confidire/presty) | [开源协议](https://github.com/confidire/presty/blob/master/LICENSE)
 
 ## 一、在使用本版本的Presty前，您需要了解以下重要事项：
 
@@ -20,16 +19,18 @@ Presty 是一款易上手、轻量级、完善化的后端PHP开发框架。
     - `patch` 表示此版本为上版本的补丁版本，修复了一些致命性Bug，其余安全性、稳定性较前一个版本有所提高，其余功能没有过多改动。
 ---
 
-## 二、Presty v1.0.0-dev-6 更新日志：
+## 二、Presty v1.0.0-dev-7 更新日志：
 
-- 模板引擎新增`Foreach`标签
-- 完善了ORM的`GROUPBY`、`ORDERBY`、`HAVING`、`LIMIT`、`LIKE`、`ESCAPE`等子句柄
-- 新增命令行模式下快速生成控制器文件、模型文件、入口文件、应用目录等命令
-- 新增AES加密/解密算法及函数（`AESencrypt()`、`AESdecrypt()`）
-- 新增Curl网络请求相关助手函数（`curl_send()`、`curl_get()`、`curl_post()`）
-- 新增动态密钥`Dynamic Key`（简称`DS`）生成算法（`createDs()`）
-- 修复了部分助手函数中的非静态类的调用语法错误
-- 修复了针对于在Linux平台运行时框架核心库目录名与命名空间不一致的导致无法系统意外终止运行漏洞
+- 新增`验证器`机制，默认内置四十余条验证规则
+- 模板引擎新增`include`标签
+- ORM中子句`WHERE`新增`in`查询条件
+- 优化了ORM中子句（影响范围包括WHERE、LIKE等关键字）的展开与拼合算法
+- 修复了Linux平台因大小写敏感导致的错误
+- 修复了特定情况下路由引擎会错误的删去值为0或`false`的Url参数的问题
+- 修复了特定情况下ORM解析子句时对数字键值的解析返回结果异常的问题
+- 修复了非调试模式下报错页面异常的问题
+- 修复了特定情况下调试信息输出类换算内存单位时有几率出现数据类型报错的问题
+- 修复了ModuleGuides命名错误的问题
 - 修复了其他已知Bug
 
 ## 三、框架已获得以下机构的认证

@@ -17,4 +17,5 @@ return [
     'template_engine_suffix' => '}}',                       //前端模板引擎标识符后缀
     'variable_prefix' => '$',                               //变量标识符前缀
     'constant_prefix' => '%',                               //常量标识符前缀
+    'view_mapping_config_file_name' => 'ViewMapping',                 //视图映射配置文件名
 ];

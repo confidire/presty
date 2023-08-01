@@ -1,10 +1,8 @@
 <?php
 
-if(!env('system.debug.mode',false)){
-            $errStr = lang()['something_wrong'];
-        }
+
         echo /** @lang text */ "<head>
-<title>错误：" . $errStr . "</title>
+<title>错误：" . $message . "</title>
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no\">
 <style>
     body{
@@ -41,24 +39,21 @@ if(!env('system.debug.mode',false)){
         margin-top: .5rem;
         margin-bottom: .5rem;
     }
-    .code{
-
-    }
 </style>
 </head>";
-if(env('system.debug.mode',false)) {
 echo ("<body>");
-echo ("<h1>" . $errStr . "</h1>" . "<p style='line-height:20px'>[错误类型：".$errType."]<br>[错误代码：" . $errCode . "]<br>[错误时间：" . date ('Y-m-d H:i:s') . "]</p>");
+if(env("system.debug_mode",false)){
+echo ("<h1>" . $message . "</h1>" . "<p style='line-height:20px'>[错误类型：".$type."]<br>[错误代码：" . $code . "]<br>[错误时间：" . date ('Y-m-d H:i:s') . "]</p>");
 echo ("<div class=\"detailed\">");
-    echo ("<h3>错误抛出位置：<br></h3><p><u>" . $errFile . "</u> 第 <b>" . $errLine . "</b> 行</p>");
-    if(file_exists ($errFile)) {
-    $file = file_get_contents ($errFile);
+    echo ("<h3>错误抛出位置：<br></h3><p><u>" . $file . "</u> 第 <b>" . $line . "</b> 行</p>");
+    if(file_exists ($file)) {
+    $file = file_get_contents ($file);
     $order = ["\r\n", "\n", "\r"];
     $replace = '<br/>';
     $content = str_replace ($order, $replace, $file);//解决某些文件的换行符是\n或\r，而有些是\r\n的问题
     $content = explode ($replace, $content);
     array_unshift ($content, ""); // 为了避免数组从0开始计算长度，而文件行数是从1开始计算行数的差异
-    $content = array_slice (array_values ($content), $errLine - 10, 20, true);
+    $content = array_slice (array_values ($content), $line - 10, 20, true);
     echo ("<div class=\"nums\">");
         foreach ($content as $key => $value) {
         echo ($key . ".<br>");
@@ -67,7 +62,7 @@ echo ("<div class=\"detailed\">");
     echo ("<pre style=\"font-family: ui-sans-serif;line-height: 25px;padding-left: 53px;padding-top: .5rem;padding-bottom: .5rem;\">");
     foreach ($content as $key => $value) {
     $value = htmlentities ($value);
-    if ($key == $errLine) {
+    if ($key == $line) {
     print_r ("<div class=\"errorLine\">                 " . $value . "</div>");
     } else {
     print_r ("                   " . $value . "<br>");
@@ -99,16 +94,14 @@ echo ("<div class=\"detailed\">");
                 }
                 echo $outputTrace;
             }
-            echo "</pre>";
-        echo ("</div>");
+        echo "</pre>";
     echo ("</div>");
-echo ("</body>");
-die();
+echo ("</div>");
 }
 else{
-echo ("<body style=\"\">");
-echo ("<h1>" . $errStr ."</h1><br>");
+echo ("<h1>" . $message . "</h1>" . "<p style='line-height:20px'>[错误时间：" . date ('Y-m-d H:i:s') . "]</p>");
 echo ("<div class=\"detailed\">");
-    echo ("<h4>本页面由<a href='https://presty.catcatalpa.com' target='_blank' style='color: #333;'>presty</a>默认错误报错提供支持</h4>");
-    echo ("</body>");
+echo ("由<a href='https://presty.confidire.com' style='color:#3b3b3b'>Presty</a>框架提供支持");
 }
+echo ("</body>");
+die();

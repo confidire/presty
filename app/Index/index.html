@@ -11,205 +11,217 @@
   -->
 <!DOCTYPE html>
 <html lang="zh-cn" >
+<!--
+  ~ +----------------------------------------------------------------------
+  ~ | Presty Framework
+  ~ +----------------------------------------------------------------------
+  ~ | Copyright (c) 20021~2022 Confidire All rights reserved.
+  ~ +----------------------------------------------------------------------
+  ~ | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+  ~ +----------------------------------------------------------------------
+  ~ | Email: 790455692@qq.com
+  ~ +----------------------------------------------------------------------
+  -->
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0,minimum-scale=1.0">
-<title>Welcome!</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0,minimum-scale=1.0">
+    <title>Welcome!</title>
+    <style>
 
-body {
-  margin:0;
-  display: flex;
-  flex-direction: column;
-}
+        body {
+            margin:0;
+            display: flex;
+            flex-direction: column;
+        }
 
-h1 {
-  font-family: 'Lato', sans-serif;
-  font-weight:300;
-  letter-spacing: 2px;
-  font-size:42px;
-}
-p {
-  font-family: 'Lato', sans-serif;
-  letter-spacing: 1px;
-  font-size:14px;
-  color: #333333;
-}
+        h1 {
+            font-family: 'Lato', sans-serif;
+            font-weight:300;
+            letter-spacing: 2px;
+            font-size:42px;
+        }
+        p {
+            font-family: 'Lato', sans-serif;
+            letter-spacing: 1px;
+            font-size:14px;
+            color: #333333;
+        }
 
-.header {
-  position:relative;
-  text-align:center;
-  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color:white;
-}
+        .header {
+            position:relative;
+            text-align:center;
+            background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+            color:white;
+        }
 
-.inner-header {
-  height:60vh;
-  width:100%;
-  margin: 0;
-  padding: 0;
-}
+        .inner-header {
+            height:60vh;
+            width:100%;
+            margin: 0;
+            padding: 0;
+        }
 
-.flex { /*Flexbox for containers*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-}
+        .flex { /*Flexbox for containers*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
 
-.root-path-div {
-    color: rgb(0 129 236);
-    background-color: #fff;
-    border-radius: 50px;
-    padding: 0px 10px 0px 0px;
-    margin: 50px 0px 0px 0px;
-}
+        .root-path-div {
+            color: rgb(0 129 236);
+            background-color: #fff;
+            border-radius: 50px;
+            padding: 0px 10px 0px 0px;
+            margin: 50px 0px 0px 0px;
+        }
 
-.root-path {
-    font-family: unset;
-    font-size: 20px;
-    color: rgb(30 100 212);
-    margin: 10px 10px 10px 7px;
-}
+        .root-path {
+            font-family: unset;
+            font-size: 20px;
+            color: rgb(30 100 212);
+            margin: 10px 10px 10px 7px;
+        }
 
-.root-path span {
-    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-    color: #fff;
-    border-radius: 50px;
-    padding: 4px 10px;
-    margin-right: 10px;
-}
+        .root-path span {
+            background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+            color: #fff;
+            border-radius: 50px;
+            padding: 4px 10px;
+            margin-right: 10px;
+        }
 
-.root-intro {
-    color: #fff;
-    font-size: medium;
-    margin-top: 20px;
-}
+        .root-intro {
+            color: #fff;
+            font-size: medium;
+            margin-top: 20px;
+        }
 
-.waves {
-  position:relative;
-  width: 100%;
-  height:15vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
-}
+        .waves {
+            position:relative;
+            width: 100%;
+            height:15vh;
+            margin-bottom:-7px; /*Fix for safari gap*/
+            min-height:100px;
+            max-height:150px;
+        }
 
-.cover-title{
-    line-height: 5px;
-}
+        .cover-title{
+            line-height: 5px;
+        }
 
-.content {
-  position:relative;
-  height:20vh;
-  text-align:center;
-  background-color: white;
-}
+        .content {
+            position:relative;
+            height:20vh;
+            text-align:center;
+            background-color: white;
+        }
 
-.bottom-intro {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
-    flex-grow: 1;
-    flex-shrink: 1;
-}
+        .bottom-intro {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
 
-.intro-item {
-    text-align: center;
-}
+        .intro-item {
+            text-align: center;
+        }
 
-.cli-test-mode-hint{
-    height: 35px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f1766d;
-}
+        .cli-test-mode-hint{
+            height: 35px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f1766d;
+        }
 
-.cli-test-mode-hint p{
-    color: #fff;
-}
+        .cli-test-mode-hint p{
+            color: #fff;
+        }
 
-div#presty-hint-close::before,
-div#presty-hint-close::after {
-    content: "";
-    position: absolute;
-    height: 20px;
-    width: 1.5px;
-    top: -2px;
-    right: 30px;
-    background: #ffffffa6;
-}
+        div#presty-hint-close::before,
+        div#presty-hint-close::after {
+            content: "";
+            position: absolute;
+            height: 20px;
+            width: 1.5px;
+            top: -2px;
+            right: 30px;
+            background: #ffffffa6;
+        }
 
-div#presty-hint-close::before{
-    transform: rotate(45deg);  /*进行旋转*/
-}
-div#presty-hint-close::after{
-    transform: rotate(-45deg);
-}
+        div#presty-hint-close::before{
+            transform: rotate(45deg);  /*进行旋转*/
+        }
+        div#presty-hint-close::after{
+            transform: rotate(-45deg);
+        }
 
-/* latin-ext */
-@font-face {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 300;
-    src: url(https://fonts.gstatic.com/s/lato/v23/S6u9w4BMUTPHh7USSwaPGR_p.woff2) format('woff2');
-    unicode-range: U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 300;
-    src: url(https://fonts.gstatic.com/s/lato/v23/S6u9w4BMUTPHh7USSwiPGQ.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://fonts.gstatic.com/s/lato/v23/S6u9w4BMUTPHh7USSwaPGR_p.woff2) format('woff2');
+            unicode-range: U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://fonts.gstatic.com/s/lato/v23/S6u9w4BMUTPHh7USSwiPGQ.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
 
-/* Animation */
+        /* Animation */
 
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-}
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-@keyframes move-forever {
-  0% {
-   transform: translate3d(-90px,0,0);
-  }
-  100% { 
-    transform: translate3d(85px,0,0);
-  }
-}
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-  .waves {
-    height:40px;
-    min-height:40px;
-  }
-  .content {
-    height:30vh;
-  }
-  h1 {
-    font-size:24px;
-  }
-}
-</style>
+        .parallax > use {
+            animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+        }
+        .parallax > use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 7s;
+        }
+        .parallax > use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 10s;
+        }
+        .parallax > use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s;
+        }
+        .parallax > use:nth-child(4) {
+            animation-delay: -5s;
+            animation-duration: 20s;
+        }
+        @keyframes move-forever {
+            0% {
+                transform: translate3d(-90px,0,0);
+            }
+            100% {
+                transform: translate3d(85px,0,0);
+            }
+        }
+        /*Shrinking for mobile*/
+        @media (max-width: 768px) {
+            .waves {
+                height:40px;
+                min-height:40px;
+            }
+            .content {
+                height:30vh;
+            }
+            h1 {
+                font-size:24px;
+            }
+        }
+    </style>
 </head>
 <body>
 {{if(app()->getRunningMode() == "cli-test" && get_config('show_local_server_hint',true && ($_COOKIE['presty_show_cli_test_mode_hint'] ?? 0) == 0))}}

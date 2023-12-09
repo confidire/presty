@@ -12,9 +12,9 @@
  */
 
 return [
-    "core" => [moduleGuides\Core::class],
-    "http" => [moduleGuides\Http::class],
-    "View" => [moduleGuides\View::class],
-    "database" => [moduleGuides\Database::class],
+    "core" => [ModuleGuides\Core::class],
+    "http" => [ModuleGuides\Http::class],
+    "View" => [ModuleGuides\View::class],
+    "database" => [ModuleGuides\Database::class],
     //"storage" => [ModuleGuides\Storage::class],
 ];

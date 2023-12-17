@@ -45,7 +45,7 @@ echo file_get_contents(VENDOR . "scrivo" . DS . "highlight.php" . DS . "src" . D
 echo "</style>
 </head>";
 echo ("<body>");
-if (env("system.debug_mode", false)) {
+if (\presty\Env::get("system.debug_mode", false)) {
     echo ("<h1>" . $message . "</h1>" . "<p style='line-height:20px'>[错误类型：" . $type . "]<br>[错误代码：" . $code . "]<br>[错误时间：" . date('Y-m-d H:i:s') . "]</p>");
     echo ("<div class=\"detailed\">");
     echo ("<h3>错误抛出位置：<br></h3><p><u>" . $file . "</u> 第 <b>" . $line . "</b> 行</p>");
@@ -78,7 +78,7 @@ if (env("system.debug_mode", false)) {
         echo ("0" . ".<br>");
         echo ("</div>");
         echo ("<pre style=\"font-family: ui-sans-serif;line-height: 25px;padding-left: 53px;padding-top: .5rem;padding-bottom: .5rem;\">");
-        $content = printf("%s", lang()['unable_get_file_content']);
+        $content = printf("%s", \presty\Container::getInstance ()->make("lang")->lang()['unable_get_file_content']);
         echo ("</pre></div>");
     }
     echo ("<div class=\"detailed\">");

@@ -19,6 +19,6 @@ class Index extends Controller
 {
     public function index (Request $request)
     {
-        return $this::assign (["runningMode" => app()->getRunningMode()])::getFileContent ('Index/index');
+        return $this::assign (["runningMode" => \presty\Container::getInstance ()->getRunningMode()])::getFileContent ('Index/index');
     }
 }

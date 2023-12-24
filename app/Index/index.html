@@ -224,7 +224,7 @@
     </style>
 </head>
 <body>
-{{if(\presty\Container::getInstance()->getRunningMode() == "cli-test" && \presty\Container::getInstance ()->make("config")->get('show_local_server_hint',true && ($_COOKIE['presty_show_cli_test_mode_hint'] ?? 0) == 0))}}
+{{if(\presty\Container::getInstance()->getRunningMode() == "cli-test" && \presty\Container::getInstance ()->makeAndSave("config")->get('show_local_server_hint',true && ($_COOKIE['presty_show_cli_test_mode_hint'] ?? 0) == 0))}}
 <div id="cli-test-mode-hint" class="cli-test-mode-hint">
     <p>您正在使用本地PHP服务器浏览该页面</p>
     <div id="presty-hint-close" style="display: block; text-align: right; height: 15px; position: absolute; top: 10px; right: 12px; cursor: pointer;"></div>

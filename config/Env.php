@@ -13,9 +13,9 @@
 
 return [
     //是否在错误抛出后清空所有已输出内容（包括echo、var_dump、print_f等函数的输出结果）
-    'error_auto_clean' => true,
+    'error_auto_clean' => false,
     //是否在视图渲染后清空所有已输出内容（非开发环境不建议关闭）
-    'render_auto_clean' => true,
+    'render_auto_clean' => false,
     //是否在错误抛出后将错误详情保存至错误日志中
     'save_error_log' => false,
     //是否在错误抛出后将错误详情发送至developer_email中设置的邮箱

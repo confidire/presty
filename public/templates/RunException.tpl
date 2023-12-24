@@ -78,7 +78,7 @@ if (\presty\Env::get("system.debug_mode", false)) {
         echo ("0" . ".<br>");
         echo ("</div>");
         echo ("<pre style=\"font-family: ui-sans-serif;line-height: 25px;padding-left: 53px;padding-top: .5rem;padding-bottom: .5rem;\">");
-        $content = printf("%s", \presty\Container::getInstance ()->make("lang")->lang()['unable_get_file_content']);
+        $content = printf("%s", \presty\Container::getInstance ()->makeAndSave("lang")->lang()['unable_get_file_content']);
         echo ("</pre></div>");
     }
     echo ("<div class=\"detailed\">");
